@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+   .column {
+    -webkit-column-width: 200px;
+    -moz-column-width: 200px;
+    column-width: 200px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    -webkit-column-rule: 1px solid #ccc;
+    -moz-column-rule: 1px solid #ccc;
+    column-rule: 1px solid #ccc;
+   }
+  </style>
+</head>
+<body>
+  <div class="column">
+  <p>
+  1.Яке призначення функцій у програмуванні?
+   Функції - це хліб з маслом програмування на JavaScript. Ідея обертання шматка програми і виклику її як змінної дуже затребувана. Це інструмент для структурування великих програм, зменшення повторень, призначення імен підпрограм, і ізолювання підпрограм один від одного.
+  2.Який загальний вигляд опису функції у JavaScript?
+   Визначення функції - звичайне визначення змінної, де значення, яке отримує змінна, є функцією.
+  3.Що таке параметри функції?
+  Параметри функції - такі ж змінні, але їх початкові значення задаються при виклику функції, а не в її коді.
+  4.Як здійснюється вихід з функції?
+  return
+  5.Як здійснюється виклик функції?
+  Треба написати назву функцію, або зробити так, щоб функція викликала сама себе.
+  6.
+  </p>
+</div>
+  <script>
+  var arr = [2,4];
+  var arifmetic = function(){
+  console.log('Середнє арифметичне:'+(arr[0]+arr[1])/2);
+};
+arifmetic();
+
+
+
+var A = [20, 40];
+function NOD(A)
+{
+  var n = A.length, x = Math.abs(A[0]);
+  for (var i = 1; i < n; i++)
+   { var y = Math.abs(A[i]);
+     while (x && y){ x > y ? x %= y : y %= x; }
+     x += y;
+   }
+  return x;
+}
+console.log ("Найбільший спільний дільник:"+NOD(A));
+  </script>
+</body>
+</html>
