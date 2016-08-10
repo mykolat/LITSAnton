@@ -36,11 +36,16 @@
   </p>
 </div>
   <script>
-  var arr = [2,4];
-  var arifmetic = function(){
-  console.log('Середнє арифметичне:'+(arr[0]+arr[1])/2);
-};
-arifmetic();
+  var arr = [3,5,4,5];
+  function arraySum(array){
+    var sum = 0;
+    for(var i=0;i<arr.length;i++){
+      sum += arr[i]
+    }
+    sum = sum/i;
+    return sum;
+  };
+  console.log (arraySum(arr));
 
 
 
