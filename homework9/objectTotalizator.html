@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+</head>
+<body>
+  <button onclick = makeStep()>run</button>
+  <script>
+  function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+  function Horse(name,years,energy,number,speed) {
+  this.name = name;
+  this.years = years;
+  this.energy = energy;
+  this.number = number;
+  this.speed = speed;
+  this.distance = 0;
+
+  this.run = function() {
+    var luck = random(1,10);
+    this.speed = (this.energy/this.years)*luck;
+    this.distance+=this.speed;
+    console.log(this.name + "пробігла" + this.distance);
+  };
+}
+
+var horseone = new Horse("Rose",1,100,1,0);
+var horsetwo = new Horse("Lilo",2,100,2,0);
+var horsethree = new Horse("Ignat",4,100,3,0);
+function makeStep(){
+horseone.run();
+horsetwo.run();
+horsethree.run();
+findwinner();
+};
+var horses = [horseone,horsetwo,horsethree];
+function findwinner(){
+  var maxHorse = 0;
+  var maxDistance = 0;
+for(var i = 0;i<horses.length;i++){
+  if (horses[i].distance>maxDistance){
+    maxDistance = horses[i].distance
+    maxHorse = horses[i]
+  }
+}
+console.log(maxHorse);
+}
+
+
+  </script>
+</body>
+</html>
