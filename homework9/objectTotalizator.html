@@ -22,7 +22,7 @@
   this.distance = 0;
 
   this.run = function() {
-    var luck = random(1,10);
+    var luck = random(1,15);
     this.speed = (this.energy+this.years)*luck;
     this.distance+=this.speed;
     console.log(this.name + "пробігла" + this.distance);
