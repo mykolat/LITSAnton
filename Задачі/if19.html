@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <script>
+var arr = [9,2,9,9];
+var current = arr[0];
+function check(){
+for(var i = 0;i<arr.length;i++){
+  if(arr[i]!=current){
+    return i+1;
+  }
+}
+}
+console.log(check());
+  </script>
+</body>
+</html>
